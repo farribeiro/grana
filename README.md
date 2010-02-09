@@ -1,4 +1,4 @@
-﻿O projeto *grana*, foi idealizado por mim para ser o release candidate do project core para *durando project*
+﻿O projeto *Grana*, foi idealizado por mim para ser o RC para o nucleo do *Durando project*
 
 ## Sobre este projeto
 
