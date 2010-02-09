@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ ====================================================================== 
+	 02/03/2008 20:32:23                                                        
+	
+	 Grana    
+	 Sistema base do Grana
+	               
+	 fabio                                                                
+======================================================================
+      -->
+<project name="grana" default="default">
+	<description>
+            Grana
+    </description>
+
+	<!-- ================================= 
+          target: default              
+         ================================= -->
+	<target name="default" depends="" description="--> Sistema base Grana">
+		<dirname file="dist" property=""/>
+		<jar destfile="grana.jar">
+		</jar>
+	</target>
+
+	<target name="build">
+		<javac srcdir="src" destdir="dist/" classpath="jarfile" debug="off" />
+	</target>
+
+	<target name="clear">
+	<delete dir="dist/"></delete>
+	</target>
+
+</project>
