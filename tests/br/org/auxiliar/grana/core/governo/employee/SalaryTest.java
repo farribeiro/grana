@@ -24,8 +24,8 @@ public class SalaryTest {
 		s = new Salaries("1108.11");
 		assertEquals("36,94", s.getDayCash());
 		assertEquals("4,62", s.getHourCash());
-		assertEquals(String.valueOf(Integer.parseInt(s.getHourCash()) * 2),
-				s.get100PercentExtraHour());
+		assertEquals(String.valueOf(Integer.parseInt(s.getHourCash()) * 2), s
+				.get100PercentExtraHour());
 	}
 
 }

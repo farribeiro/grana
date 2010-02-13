@@ -19,8 +19,9 @@ public class Financiamento {
 	public String getDoubleLoanValue() {
 		return LoanValue.multiply(new BigDecimal("2")).toString();
 	}
+
 	// TODO Mostrar o quanto irá pagar a mais do financimamento
-	
+
 	// TODO Mostrar quanto irá pagar pelo financiamento.
 	public String getPaymentPlus() {
 		return "";

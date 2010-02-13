@@ -13,7 +13,6 @@ public class TextUI {
 		}
 	}
 
-
 	private void TextUI() {
 		System.out.print("Grana system - Simple UI Interface\n");
 		System.out.print("Option:\n");

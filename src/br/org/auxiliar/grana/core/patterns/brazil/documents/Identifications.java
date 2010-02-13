@@ -12,7 +12,7 @@ public class Identifications {
 	private int QuantidadeDigitos;
 	private int Multiplicador;
 
-	private int getQuantidadeDigitos(final int i){
+	private int getQuantidadeDigitos(final int i) {
 		return document.length() - i;
 	}
 
@@ -128,11 +128,13 @@ public class Identifications {
 	public Identifications(final String doc) {
 		document = doc;
 		if (document.length() == id.getLength_CPF()) {
-			QuantidadeDigitos = getQuantidadeDigitos(id.getVerificationDigitsCPF());
+			QuantidadeDigitos = getQuantidadeDigitos(id
+					.getVerificationDigitsCPF());
 			Multiplicador = 10;
 		}
 		if (document.length() == id.getLength_RG()) {
-			QuantidadeDigitos = getQuantidadeDigitos(id.getVerificationDigitsRG());
+			QuantidadeDigitos = getQuantidadeDigitos(id
+					.getVerificationDigitsRG());
 			Multiplicador = 9;
 		}
 	}

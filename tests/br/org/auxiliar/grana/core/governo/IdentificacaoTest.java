@@ -27,7 +27,7 @@ public class IdentificacaoTest {
 	public void TestRG() {
 		id = new Identifications("425410985");
 		assertEquals(true, id.isRGValido());
-		id= new Identifications("425410146");
+		id = new Identifications("425410146");
 	}
 
 	@Override

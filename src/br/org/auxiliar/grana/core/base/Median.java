@@ -8,10 +8,10 @@ public class Median {
 	private HashSet<BigDecimal> array = new HashSet<BigDecimal>();
 	private BigDecimal sum = null;
 
-	public void add(String value){
+	public void add(String value) {
 		array.add(new BigDecimal(value));
 	}
-	
+
 	private String arithimetri() {
 		return "";
 	}
