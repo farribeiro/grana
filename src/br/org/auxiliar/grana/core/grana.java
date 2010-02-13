@@ -1,6 +1,6 @@
 package br.org.auxiliar.grana.core;
 
-import br.org.auxiliar.grana.core.simpleui.TextUI;
+import br.org.auxiliar.grana.ui.text.TextUI;
 
 /**
  * 
