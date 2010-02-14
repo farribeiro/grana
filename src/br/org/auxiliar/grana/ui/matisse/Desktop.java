@@ -32,6 +32,7 @@ public class Desktop extends javax.swing.JFrame {
   private void initComponents() {
 
     barraFerramenta = new javax.swing.JToolBar();
+    btnEventos = new javax.swing.JButton();
     jDesktopPane1 = new javax.swing.JDesktopPane();
     menu = new javax.swing.JMenuBar();
     mnuArquivo = new javax.swing.JMenu();
@@ -40,6 +41,18 @@ public class Desktop extends javax.swing.JFrame {
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
     barraFerramenta.setRollover(true);
+
+    btnEventos.setMnemonic('e');
+    btnEventos.setText("Eventos");
+    btnEventos.setFocusable(false);
+    btnEventos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    btnEventos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+    btnEventos.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnEventosActionPerformed(evt);
+      }
+    });
+    barraFerramenta.add(btnEventos);
 
     mnuArquivo.setMnemonic('a');
     mnuArquivo.setText("Arquivo");
@@ -80,12 +93,19 @@ public class Desktop extends javax.swing.JFrame {
       System.exit(0);
     }//GEN-LAST:event_onClose
 
+    private void btnEventosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEventosActionPerformed
+      evento = new AdicionarEventos();
+      jDesktopPane1.add(evento);
+      evento.setVisible(true);
+    }//GEN-LAST:event_btnEventosActionPerformed
+    private AdicionarEventos evento;
     /**
     * @param args the command line arguments
     */
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JToolBar barraFerramenta;
+  private javax.swing.JButton btnEventos;
   private javax.swing.JMenuItem iSair;
   private javax.swing.JDesktopPane jDesktopPane1;
   private javax.swing.JMenuBar menu;
