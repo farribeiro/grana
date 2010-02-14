@@ -13,8 +13,11 @@ import java.math.BigDecimal;
 public class Eventos {
 
 	private Evento evento;
+	private String v;
 
 	public Eventos(String valor, String descricao, char tipoEvento) {
+		v = valor.replace(".", "");
+		v = v.replace(",", ".");
 		evento = new Evento(new BigDecimal(valor), descricao, tipoEvento);
 	}
 

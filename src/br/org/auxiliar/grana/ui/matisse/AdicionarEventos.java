@@ -139,12 +139,10 @@ public class AdicionarEventos extends javax.swing.JInternalFrame {
   }// </editor-fold>//GEN-END:initComponents
 
 	private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnOKActionPerformed
-    v = valor.getText().replace(".", "");
-    v = v.replace(",", ".");
-		evento = new Eventos(v, descricao.getText(), 'c');
+		evento = new Eventos(valor.getText(), descricao.getText(), 'c');
 	}// GEN-LAST:event_btnOKActionPerformed
 
-  private String v;
+
 	private Eventos evento;
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
