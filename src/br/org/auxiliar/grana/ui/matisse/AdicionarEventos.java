@@ -75,6 +75,8 @@ public class AdicionarEventos extends javax.swing.JInternalFrame {
     labelValor.setLabelFor(valor);
     labelValor.setText("Valor");
 
+    valor.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+
     labelDescricao.setLabelFor(descricao);
     labelDescricao.setText("Descrição");
 
