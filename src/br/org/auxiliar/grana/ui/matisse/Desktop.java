@@ -29,82 +29,88 @@ public class Desktop extends javax.swing.JFrame {
 	 */
 	@SuppressWarnings("unchecked")
 	// <editor-fold defaultstate="collapsed"
-	// desc="Generated Code">//GEN-BEGIN:initComponents
-	private void initComponents() {
+  // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+  private void initComponents() {
 
-		barraFerramenta = new javax.swing.JToolBar();
-		btnEventos = new javax.swing.JButton();
-		jDesktopPane1 = new javax.swing.JDesktopPane();
-		menu = new javax.swing.JMenuBar();
-		mnuArquivo = new javax.swing.JMenu();
-		iSair = new javax.swing.JMenuItem();
+    barraFerramenta = new javax.swing.JToolBar();
+    btnEventos = new javax.swing.JButton();
+    btnResumo = new javax.swing.JButton();
+    jDesktopPane1 = new javax.swing.JDesktopPane();
+    menu = new javax.swing.JMenuBar();
+    mnuArquivo = new javax.swing.JMenu();
+    iSair = new javax.swing.JMenuItem();
 
-		setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+    setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-		barraFerramenta.setRollover(true);
+    barraFerramenta.setRollover(true);
 
-		btnEventos.setMnemonic('e');
-		btnEventos.setText("Eventos");
-		btnEventos.setFocusable(false);
-		btnEventos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-		btnEventos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-		btnEventos.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				btnEventosActionPerformed(evt);
-			}
-		});
-		barraFerramenta.add(btnEventos);
+    btnEventos.setMnemonic('e');
+    btnEventos.setText("Eventos");
+    btnEventos.setFocusable(false);
+    btnEventos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    btnEventos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+    btnEventos.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnEventosActionPerformed(evt);
+      }
+    });
+    barraFerramenta.add(btnEventos);
 
-		mnuArquivo.setMnemonic('a');
-		mnuArquivo.setText("Arquivo");
+    btnResumo.setMnemonic('r');
+    btnResumo.setText("Resumo");
+    btnResumo.setFocusable(false);
+    btnResumo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    btnResumo.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+    btnResumo.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnResumoActionPerformed(evt);
+      }
+    });
+    barraFerramenta.add(btnResumo);
 
-		iSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(
-				java.awt.event.KeyEvent.VK_F4,
-				java.awt.event.InputEvent.ALT_MASK));
-		iSair.setMnemonic('r');
-		iSair.setText("Sair");
-		iSair.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				onClose(evt);
-			}
-		});
-		mnuArquivo.add(iSair);
+    mnuArquivo.setMnemonic('a');
+    mnuArquivo.setText("Arquivo");
 
-		menu.add(mnuArquivo);
+    iSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.ALT_MASK));
+    iSair.setMnemonic('r');
+    iSair.setText("Sair");
+    iSair.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        onClose(evt);
+      }
+    });
+    mnuArquivo.add(iSair);
 
-		setJMenuBar(menu);
+    menu.add(mnuArquivo);
 
-		javax.swing.GroupLayout layout = new javax.swing.GroupLayout(
-				getContentPane());
-		getContentPane().setLayout(layout);
-		layout.setHorizontalGroup(layout.createParallelGroup(
-				javax.swing.GroupLayout.Alignment.LEADING).addComponent(
-				barraFerramenta, javax.swing.GroupLayout.DEFAULT_SIZE, 400,
-				Short.MAX_VALUE).addComponent(jDesktopPane1,
-				javax.swing.GroupLayout.Alignment.TRAILING,
-				javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE));
-		layout
-				.setVerticalGroup(layout
-						.createParallelGroup(
-								javax.swing.GroupLayout.Alignment.LEADING)
-						.addGroup(
-								layout
-										.createSequentialGroup()
-										.addComponent(
-												barraFerramenta,
-												javax.swing.GroupLayout.PREFERRED_SIZE,
-												25,
-												javax.swing.GroupLayout.PREFERRED_SIZE)
-										.addPreferredGap(
-												javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-										.addComponent(
-												jDesktopPane1,
-												javax.swing.GroupLayout.DEFAULT_SIZE,
-												248, Short.MAX_VALUE)));
+    setJMenuBar(menu);
 
-		pack();
-	}// </editor-fold>//GEN-END:initComponents
+    javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+    getContentPane().setLayout(layout);
+    layout.setHorizontalGroup(
+      layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addComponent(barraFerramenta, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+      .addComponent(jDesktopPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+    );
+    layout.setVerticalGroup(
+      layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(layout.createSequentialGroup()
+        .addComponent(barraFerramenta, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(jDesktopPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE))
+    );
 
+    pack();
+  }// </editor-fold>//GEN-END:initComponents
+
+  private void btnResumoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResumoActionPerformed
+    resumo = new Resumo();
+    jDesktopPane1.add(resumo);
+    resumo.setVisible(true);
+  }//GEN-LAST:event_btnResumoActionPerformed
+
+
+  private Resumo resumo;
 	private void onClose(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_onClose
 		System.exit(0);
 	}// GEN-LAST:event_onClose
@@ -121,13 +127,14 @@ public class Desktop extends javax.swing.JFrame {
 	 *            the command line arguments
 	 */
 
-	// Variables declaration - do not modify//GEN-BEGIN:variables
-	private javax.swing.JToolBar barraFerramenta;
-	private javax.swing.JButton btnEventos;
-	private javax.swing.JMenuItem iSair;
-	private javax.swing.JDesktopPane jDesktopPane1;
-	private javax.swing.JMenuBar menu;
-	private javax.swing.JMenu mnuArquivo;
-	// End of variables declaration//GEN-END:variables
+  // Variables declaration - do not modify//GEN-BEGIN:variables
+  private javax.swing.JToolBar barraFerramenta;
+  private javax.swing.JButton btnEventos;
+  private javax.swing.JButton btnResumo;
+  private javax.swing.JMenuItem iSair;
+  private javax.swing.JDesktopPane jDesktopPane1;
+  private javax.swing.JMenuBar menu;
+  private javax.swing.JMenu mnuArquivo;
+  // End of variables declaration//GEN-END:variables
 
 }
