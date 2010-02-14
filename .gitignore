@@ -4,3 +4,4 @@
 .euml2
 .umlproject
 bin
+*.java~
