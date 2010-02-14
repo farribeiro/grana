@@ -11,7 +11,7 @@
 
 package br.org.auxiliar.grana.ui.matisse;
 
-import br.org.auxiliar.grana.core.financial.Eventos;
+import br.org.auxiliar.grana.core.administrative.Eventos;
 
 /**
  * 
