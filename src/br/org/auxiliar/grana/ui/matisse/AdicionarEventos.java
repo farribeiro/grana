@@ -43,6 +43,7 @@ public class AdicionarEventos extends javax.swing.JInternalFrame {
     btnOK = new javax.swing.JButton();
     btnCancelar = new javax.swing.JButton();
 
+    setClosable(true);
     setTitle("Eventos");
 
     grpEvento.setBorder(javax.swing.BorderFactory.createTitledBorder("Evento"));
@@ -75,7 +76,7 @@ public class AdicionarEventos extends javax.swing.JInternalFrame {
     labelValor.setLabelFor(valor);
     labelValor.setText("Valor");
 
-    valor.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+    valor.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
 
     labelDescricao.setLabelFor(descricao);
     labelDescricao.setText("Descrição");
@@ -110,7 +111,7 @@ public class AdicionarEventos extends javax.swing.JInternalFrame {
             .addComponent(btnOK)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(btnCancelar)))
-        .addGap(19, 19, 19))
+        .addContainerGap())
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -137,7 +138,7 @@ public class AdicionarEventos extends javax.swing.JInternalFrame {
   }// </editor-fold>//GEN-END:initComponents
 
     private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
-      evento = new Eventos(valor.toString(), descricao.toString(), 'c');
+      evento = new Eventos(valor.getText(), descricao.getText(), 'c');
     }//GEN-LAST:event_btnOKActionPerformed
 private Eventos evento;
 
