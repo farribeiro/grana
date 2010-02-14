@@ -4,11 +4,11 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import br.org.auxiliar.grana.core.base.PatternDocuments;
+import br.org.auxiliar.grana.core.base.PatternDocument;
 
 public class PatternDocumentTest {
 
-	private PatternDocuments pd = new PatternDocuments("312.509.068-73");
+	private PatternDocument pd = new PatternDocument("312.509.068-73");
 
 	@Test
 	public void TestMascara() {

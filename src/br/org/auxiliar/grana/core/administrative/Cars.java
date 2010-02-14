@@ -1,13 +1,13 @@
 package br.org.auxiliar.grana.core.administrative;
 
-import br.org.auxiliar.grana.core.base.PatternsNumbers;
+import br.org.auxiliar.grana.core.base.PatternNumber;
 
 public class Cars {
 
 	private Car car = new Car();
 	private double initKM;
 	private double endKM;
-	private PatternsNumbers np;
+	private PatternNumber np;
 
 	public Cars(String initkm, String endkm, String fuel, String fuelcost) {
 		initKM = Double.valueOf(initkm);
@@ -15,7 +15,7 @@ public class Cars {
 		car.setKm(setKM());
 		car.setFuel(Double.valueOf(fuel));
 		car.setFuelCost(Double.valueOf(fuelcost));
-		np = new PatternsNumbers();
+		np = new PatternNumber();
 	}
 
 	// public Cars(String km, String fuel, String fuelcost) {

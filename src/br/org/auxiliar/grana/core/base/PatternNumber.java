@@ -2,7 +2,7 @@ package br.org.auxiliar.grana.core.base;
 
 import java.text.DecimalFormat;
 
-public class PatternsNumbers {
+public class PatternNumber {
 
 	private final DecimalFormat NumberPattern = new DecimalFormat(
 			"#,###,##0,00");

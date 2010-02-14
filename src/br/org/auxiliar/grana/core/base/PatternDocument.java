@@ -1,10 +1,10 @@
 package br.org.auxiliar.grana.core.base;
 
-public class PatternDocuments {
+public class PatternDocument {
 
 	private String document;
 
-	public PatternDocuments(String document) {
+	public PatternDocument(String document) {
 		this.document = document;
 	}
 
