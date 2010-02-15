@@ -44,6 +44,7 @@ public class Desktop extends javax.swing.JFrame {
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
     setTitle("Grana Peroject");
+    setMinimumSize(new java.awt.Dimension(800, 600));
 
     barraFerramenta.setRollover(true);
 

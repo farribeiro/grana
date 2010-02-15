@@ -43,6 +43,10 @@ public class FinancialTools {
 		return cem;
 	}
 
+	/**
+	 * 
+	 * @return Months in Years
+	 */
 	public BigDecimal getMonthsInYear() {
 		return monthsInYear;
 	}
