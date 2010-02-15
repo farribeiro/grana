@@ -91,6 +91,11 @@ public class AdicionarEventos extends javax.swing.JInternalFrame {
 
     btnCancelar.setMnemonic('c');
     btnCancelar.setText("Cancelar");
+    btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnCancelarActionPerformed(evt);
+      }
+    });
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
@@ -136,6 +141,10 @@ public class AdicionarEventos extends javax.swing.JInternalFrame {
 
     pack();
   }// </editor-fold>//GEN-END:initComponents
+
+  private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+    this.dispose();
+  }//GEN-LAST:event_btnCancelarActionPerformed
 
   private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnOKActionPerformed
     try {
