@@ -1,4 +1,6 @@
-﻿O projeto *Grana*, foi idealizado por mim para ser o RC para o nucleo do *Durango project*
+﻿# Grana Project 
+
+O projeto *Grana*, foi idealizado por mim para ser o RC para o nucleo do *Durango project*
 
 ## Sobre este projeto
 
