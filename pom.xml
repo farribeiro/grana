@@ -3,6 +3,17 @@
   <groupId>grana</groupId>
   <artifactId>grana</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <developers>
+  	<developer>
+  		<id>1</id>
+  		<name>Fábio Rodrigues Ribeiro</name>
+  		<email>farribeiro@gmail.com.br</email>
+  		<url>farribeiro.blogspot.com</url>
+  		<organization>Particular</organization>
+  		<roles>
+  		</roles>
+  	</developer>
+  </developers>
   <build>
   	<sourceDirectory>src</sourceDirectory>
   	<testSourceDirectory>tests</testSourceDirectory>
