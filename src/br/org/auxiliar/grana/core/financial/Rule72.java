@@ -22,7 +22,6 @@ public class Rule72 {
 		return calculate().toString();
 	}
 
-	// TODO Repensar na logica deste metodo
 	public String getExtendedResult() {
 		int resultado = calculate().divide(ft.getMonthsInYear()).intValue();
 		if (resultado >= 2)
