@@ -83,20 +83,21 @@ public class PatternTime {
 	public int toMonths() {
 		return Integer.parseInt(month) % Integer.parseInt(getTotalofMonths());
 	}
+
 	// TODO Repensar na logica deste metodo e reestrutura
-	public String getExtendedResult() {
-		int resultado = calculate().divide(ft.getMonthsInYear()).intValue();
-		
-		if (resultado >= 2)
-			extenso = String.valueOf(resultado) + " anos";
-		else
-			extenso = String.valueOf(resultado) + " ano";
-
-		resultado = calculate().intValue();
-		if ((resultado % 12) != 0)
-			extenso = extenso + " e " + (resultado % 12) + " meses";
-
-		return extenso;
-	}
+	// public String getExtendedResult() {
+	// int resultado = calculate().divide(ft.getMonthsInYear()).intValue();
+	//		
+	// if (resultado >= 2)
+	// extenso = String.valueOf(resultado) + " anos";
+	// else
+	// extenso = String.valueOf(resultado) + " ano";
+	//
+	// resultado = calculate().intValue();
+	// if ((resultado % 12) != 0)
+	// extenso = extenso + " e " + (resultado % 12) + " meses";
+	//
+	// return extenso;
+	// }
 
 }
