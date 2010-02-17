@@ -2,55 +2,32 @@ package br.org.auxiliar.grana.core.administrative;
 
 public class Person extends PersonCommon {
 
-	private int RG;
-	private int CPF;
-	private int idade;
+	private String rg;
+	private String firstName;
+	private String familyName;
+	private String cpf;
 	private boolean civil;
-	// private boolean married;
 	private final int civilAge = 21;
 	private String birthday;
-
+	
 	public int getCivilAge() {
 		return civilAge;
 	}
-
-	public String getBirthday() {
-		return birthday;
+	
+	public Person(final String RG, final String CPF, final String birthday,
+			final String firstName, final String familyName) {
+		this.rg = RG;
+		this.cpf = CPF;
+		this.birthday = birthday;
+		this.firstName = firstName;
+		this.familyName = familyName;
 	}
-
-	public void setBirthday(String birthday) {
+	
+	public Person(final String birthday) {
 		this.birthday = birthday;
 	}
-
-	public int getRG() {
-		return RG;
-	}
-
-	public void setRG(int rG) {
-		RG = rG;
-	}
-
-	public int getCPF() {
-		return CPF;
-	}
-
-	public void setCPF(int cPF) {
-		CPF = cPF;
-	}
-
-	public int getIdade() {
-		return idade;
-	}
-
-	public void setIdade(int idade) {
-		this.idade = idade;
-	}
-
-	public boolean isCivil() {
-		return civil;
-	}
-
-	public void setCivil(boolean civil) {
-		this.civil = civil;
+	
+	public String getBirthday() {
+		return birthday;
 	}
 }

@@ -8,16 +8,25 @@ import br.org.auxiliar.grana.core.base.PatternTime;
 public class People {
 
 	// private Commons c = new Commons();
-	private Person person = new Person();
+	private Person person;
 	private PatternTime pd;
 	private GregorianCalendar bd;
 	private int Age;
 
-	public People() {
+	public People(final String RG, final String CPF, final String birthday,
+			final String firstName, final String familyName) {
+		person = new Person(RG, CPF, birthday, firstName, familyName);
+	}
+
+	public void save() {
+	}
+
+	private void delete() {
+
 	}
 
 	public People(String birthday) {
-		person.setBirthday(birthday);
+		person = new Person(birthday);
 	}
 
 	public String getAge() {
