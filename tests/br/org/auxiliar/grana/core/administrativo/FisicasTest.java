@@ -12,7 +12,7 @@ import br.org.auxiliar.grana.core.administrative.People;
  */
 public class FisicasTest {
 
-	private People person = new People();
+	private People person;
 
 	// private PatternTime pd = new PatternTime();
 

@@ -9,8 +9,8 @@ public class People {
 
 	// private Commons c = new Commons();
 	private Person person;
-	private PatternTime pd;
-	private GregorianCalendar bd;
+	private PatternTime time;
+	private GregorianCalendar birthday;
 	private int Age;
 
 	public People(final String RG, final String CPF, final String birthday,
@@ -18,33 +18,40 @@ public class People {
 		person = new Person(RG, CPF, birthday, firstName, familyName);
 	}
 
-	public void save() {
-	}
-
-	private void delete() {
-
-	}
-
-	public People(String birthday) {
-		person = new Person(birthday);
-	}
+	// public void save() {
+	// }
+	//
+	// private void delete() {
+	//
+	// }
 
 	public String getAge() {
-		pd = new PatternTime(person.getBirthday());
-		bd = pd.toGregorian();
+		time = new PatternTime(person.getBirthday());
+		birthday = time.toGregorian();
 
-		int age = pd.getToday().get(Calendar.YEAR) - bd.get(Calendar.YEAR);
+		int age = time.getToday().get(Calendar.YEAR) - birthday.get(Calendar.YEAR);
 
-		bd.add(Calendar.YEAR, age);
-		if (pd.getToday().before(bd)) {
+		birthday.add(Calendar.YEAR, age);
+		if (time.getToday().before(age))
 			age -= 1;
-		}
+
 		return String.valueOf(age);
 	}
 
 	public boolean isAdult(String age) {
 		this.Age = Integer.parseInt(age);
 		return Age >= person.getCivilAge();
+	}
+
+	// public void save() {
+	// }
+	//
+	// private void delete() {
+	//
+	// }
+	
+	public People(String birthday) {
+		person = new Person(birthday);
 	}
 }
 // Duvida com ou sem mascara?
