@@ -14,4 +14,6 @@ public class Bank {
 		this.number = number;
 		this.name = name;
 	}
+	public Bank() {
+	}
 }
