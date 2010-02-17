@@ -8,7 +8,7 @@ public class Cars {
 	private double initKM;
 	private double endKM;
 	private PatternNumber np;
-
+	
 	public Cars(String initkm, String endkm, String fuel, String fuelcost) {
 		initKM = Double.valueOf(initkm);
 		endKM = Double.valueOf(endkm);
