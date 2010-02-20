@@ -2,14 +2,15 @@ package br.org.auxiliar.grana.core.patterns.brazil.employee;
 
 import java.math.BigDecimal;
 
+import br.org.auxiliar.grana.core.base.PatternTime;
 import br.org.auxiliar.grana.core.financial.FinancialTools;
 
 public class Salaries {
 
-	private Salary salary = new Salary();
+	private Salary salary;
 	private FinancialTools ft = new FinancialTools();
+	private PatternTime pt = new PatternTime();
 
-	// private PatternTime pt = new PatternTime();
 	// private String date;
 
 	/**
@@ -20,28 +21,19 @@ public class Salaries {
 	 * @param months
 	 *            Months worked in year
 	 */
-	public Salaries(String solid_salary, String months) {
-		salary.setSolid_salary(new BigDecimal(solid_salary));
-		salary.setMonths(new BigDecimal(months));
-		setTax();
+	public Salaries(String solid_salary, String months, String tax) {
+		salary = new Salary(new BigDecimal(solid_salary), Integer
+				.parseInt(months), new BigDecimal(tax));
 	}
 
-	private void setTax() {
-		if (salary.getSolid_salary().doubleValue() <= 1200)
-			salary.setTax(salary.getMinimalTax_INSS());
-		else
-			salary.setTax(salary.getMaximalTax_INS());
-	}
-
-	/**
+	/*
 	 * This constructor is to get day/hour cashes / extra cashes
 	 * 
-	 * @param solid_salary
-	 *            The solid salary to calculate the hour cash
+	 * @param solid_salary The solid salary to calculate the hour cash
 	 */
-	public Salaries(String solid_salary) {
-		salary.setSolid_salary(new BigDecimal(solid_salary));
-	}
+	// public Salaries(String solid_salary) {
+	// salary.setSolidSalary(new BigDecimal(solid_salary));
+	// }
 
 	/**
 	 * This class calculate the brazilian 13th Salary and set to solid salary to
@@ -50,26 +42,27 @@ public class Salaries {
 	 * @return 13th Solid Salary
 	 */
 	public String get13thSalary() {
-		salary.setSolid_salary(salary.getSolid_salary().multiply(
-				salary.getMonths()).divide(ft.getMonthsInYear()));
-		return ft.getCurrency_Format().format(
-				salary.getSolid_salary().doubleValue());
+		BigDecimal s = salary.getSolidSalary().multiply(
+				new BigDecimal(salary.getMonths()))
+				.divide(ft.getMonthsInYear());
+
+		return ft.getCurrency_Format().format(s.doubleValue());
 	}
 
 	public String getINSS() {
 		return ft.getCurrency_Format().format(
-				salary.getSolid_salary().multiply(salary.getTax()).divide(
+				salary.getSolidSalary().multiply(salary.getTax()).divide(
 						ft.getCem()).doubleValue());
 	}
 
 	public String getDayCash() {
 		return ft.getCurrency_Format().format(
-				salary.getSolid_salary().divide(salary.getMaxDaysInTheMonth()));
+				salary.getSolidSalary().divide(salary.getMaxDaysInTheMonth()));
 	}
 
 	public String getHourCash() {
 		return ft.getCurrency_Format().format(
-				salary.getSolid_salary().divide(salary.getMaxDaysInTheMonth())
+				salary.getSolidSalary().divide(salary.getMaxDaysInTheMonth())
 						.divide(salary.getMaxHourForDay()).doubleValue());
 	}
 
