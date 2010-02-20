@@ -9,7 +9,8 @@ public class Salaries {
 
 	private Salary salary;
 	private FinancialTools ft = new FinancialTools();
-	private PatternTime pt = new PatternTime();
+
+	// private PatternTime pt = new PatternTime();
 
 	// private String date;
 
@@ -74,5 +75,4 @@ public class Salaries {
 	public String get100PercentExtraHour() {
 		return "";
 	}
-
 }
