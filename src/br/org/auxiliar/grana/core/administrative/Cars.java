@@ -4,17 +4,16 @@ import br.org.auxiliar.grana.core.base.PatternNumber;
 
 public class Cars {
 
-	private Car car = new Car();
+	private Car car;
 	private double initKM;
 	private double endKM;
 	private PatternNumber np;
-	
+
 	public Cars(String initkm, String endkm, String fuel, String fuelcost) {
 		initKM = Double.valueOf(initkm);
 		endKM = Double.valueOf(endkm);
-		car.setKm(setKM());
-		car.setFuel(Double.valueOf(fuel));
-		car.setFuelCost(Double.valueOf(fuelcost));
+		car = new Car(Double.valueOf(fuel), Double.valueOf(fuelcost), this
+				.setKM());
 		np = new PatternNumber();
 	}
 
