@@ -10,8 +10,32 @@ public class Person extends PersonCommon {
 	private final int civilAge = 21;
 	private String birthday;
 	
+	public String getRg() {
+		return rg;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public String getFamilyName() {
+		return familyName;
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public boolean isCivil() {
+		return civil;
+	}
+
 	public int getCivilAge() {
 		return civilAge;
+	}
+	
+	public String getBirthday() {
+		return birthday;
 	}
 	
 	public Person(final String RG, final String CPF, final String birthday,
@@ -22,12 +46,11 @@ public class Person extends PersonCommon {
 		this.firstName = firstName;
 		this.familyName = familyName;
 	}
-	
+
 	public Person(final String birthday) {
 		this.birthday = birthday;
 	}
-	
-	public String getBirthday() {
-		return birthday;
+
+	public Person() {
 	}
 }

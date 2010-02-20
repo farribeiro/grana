@@ -2,6 +2,10 @@ package br.org.auxiliar.grana.core.administrative;
 
 public class Corporation extends Person {
 
+	public Corporation() {
+		// TODO Auto-generated constructor stub
+	}
+
 	private String CorporationName;
 	private final int DigitosCNPJ = 14;
 	private String CNPJ;
@@ -16,9 +20,6 @@ public class Corporation extends Person {
 
 	public int getDigitosCNPJ() {
 		return DigitosCNPJ;
-	}
-
-	public Corporation() {
 	}
 
 	public String getCorporationName() {
