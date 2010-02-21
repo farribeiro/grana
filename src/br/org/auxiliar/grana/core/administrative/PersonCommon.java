@@ -1,6 +1,5 @@
 package br.org.auxiliar.grana.core.administrative;
 
-import br.org.auxiliar.grana.core.patterns.brazil.CEP;
 
 public class PersonCommon {
 
