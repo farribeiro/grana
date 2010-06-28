@@ -8,7 +8,12 @@ public class Person extends PersonCommon {
 	private String cpf;
 	private boolean civil;
 	private final int civilAge = 21;
+	private final int penalAge = 18;	
 	private String birthday;
+	
+	public int getPenalAge() {
+		return penalAge;
+	}
 	
 	public String getRg() {
 		return rg;

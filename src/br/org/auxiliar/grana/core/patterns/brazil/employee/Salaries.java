@@ -2,7 +2,6 @@ package br.org.auxiliar.grana.core.patterns.brazil.employee;
 
 import java.math.BigDecimal;
 
-import br.org.auxiliar.grana.core.base.PatternTime;
 import br.org.auxiliar.grana.core.financial.FinancialTools;
 
 public class Salaries {
@@ -11,7 +10,6 @@ public class Salaries {
 	private FinancialTools ft = new FinancialTools();
 
 	// private PatternTime pt = new PatternTime();
-
 	// private String date;
 
 	/**

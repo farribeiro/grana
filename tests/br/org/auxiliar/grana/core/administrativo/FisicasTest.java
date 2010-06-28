@@ -12,7 +12,7 @@ import br.org.auxiliar.grana.core.administrative.People;
  */
 public class FisicasTest {
 
-	private People person;
+	private People person = new People();
 
 	// private PatternTime pd = new PatternTime();
 
@@ -30,9 +30,8 @@ public class FisicasTest {
 
 	@Test
 	public void TestMaioridade() {
-		assertEquals(true, person.isAdult("25"));
-		assertEquals(true, person.isAdult("21"));
-		assertEquals(false, person.isAdult("20"));
+		assertEquals(true, person.inCivilAge("21"));
+		assertEquals(false, person.inCivilAge("20"));
 	}
 
 	@Override
