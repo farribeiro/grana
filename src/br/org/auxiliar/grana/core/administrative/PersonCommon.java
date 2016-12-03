@@ -42,4 +42,5 @@ public class PersonCommon {
 	//		cep = new CEP(cep);
 			this.telefone = telefone;
 		}
+// TODO Fazer um registro automatico para classe CEP dos dados referente a rua;
 }
