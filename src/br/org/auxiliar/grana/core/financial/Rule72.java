@@ -4,6 +4,8 @@ import br.org.auxiliar.grana.core.base.PatternNumber;
 import java.math.BigDecimal;
 
 /**
+ * The rule 72
+ * 
  * 
  * @author fabio
  */
@@ -23,16 +25,19 @@ public class Rule72 {
 	}
 
 	public String getExtendedResult() {
-		int resultado = calculate().divide(ft.getMonthsInYear()).intValue();
-		if (resultado >= 2)
-			extenso = String.valueOf(resultado) + " anos";
+		if (tax.intValue() <= 6) {
+			int resultado = calculate().divide(ft.getMonthsInYear()).intValue();
+			if (resultado >= 2)
+				extenso = String.valueOf(resultado) + " anos";
+			else
+				extenso = String.valueOf(resultado) + " ano";
+
+			resultado = calculate().intValue();
+			if ((resultado % 12) != 0)
+				extenso = extenso + " e " + (resultado % 12) + " meses";
+		}
 		else
-			extenso = String.valueOf(resultado) + " ano";
-
-		resultado = calculate().intValue();
-		if ((resultado % 12) != 0)
-			extenso = extenso + " e " + (resultado % 12) + " meses";
-
+			extenso = "Aliquota < 6";
 		return extenso;
 	}
 

@@ -161,7 +161,7 @@ public class Juros extends javax.swing.JInternalFrame {
 			jLabel1.setText(rule72.getExtendedResult());
 			rule72 = null;
 		} catch (Exception e) {
-			jLabel1.setText("Erro no calculo.");
+			jLabel1.setText("Erro no calculo!");
 		}
 	}// GEN-LAST:event_btnCalcularActionPerformed
 
