@@ -22,7 +22,7 @@ public class People {
 
 	public String getAge() {
 		pd = new PatternTime(person.getBirthday());
-		bd = pd.getString2Gregorian();
+		bd = pd.toGregorian();
 
 		int age = pd.getToday().get(Calendar.YEAR) - bd.get(Calendar.YEAR);
 

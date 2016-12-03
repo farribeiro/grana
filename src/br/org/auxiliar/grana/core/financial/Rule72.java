@@ -8,37 +8,36 @@ import java.math.BigDecimal;
  * @author fabio
  */
 public class Rule72 {
+	private final BigDecimal rule = new BigDecimal(72);
+	private BigDecimal tax;
+	private PatternNumber pn = new PatternNumber();
+	private String extenso;
+	private FinancialTools ft = new FinancialTools();
 
-  private final BigDecimal rule = new BigDecimal(72);
-  private BigDecimal tax;
-  private PatternNumber pn = new PatternNumber();
-  private String resultado;
-  private FinancialTools ft = new FinancialTools();
+	private BigDecimal calculate() {
+		return rule.divide(tax);
+	}
 
-  private BigDecimal calculate() {
-    return rule.divide(tax);
-  }
+	public String getResultInMonths() {
+		return calculate().toString();
+	}
 
-  public String getResultInMonths() {
-    return calculate().toString();
-  }
+	// TODO Repensar na logica deste metodo
+	public String getExtendedResult() {
+		int resultado = calculate().divide(ft.getMonthsInYear()).intValue();
+		if (resultado >= 2)
+			extenso = String.valueOf(resultado) + " anos";
+		else
+			extenso = String.valueOf(resultado) + " ano";
 
-  // TODO Repensar na logica deste metodo
-  public String getExtendedResult() {
-    resultado = calculate().divide(ft.getMonthsInYear()).abs().toString();
-    if (calculate().intValue() > 1)
-      resultado = resultado + " anos";
-    else if (calculate().intValue() == 1)
-      resultado = resultado + "ano";
+		resultado = calculate().intValue();
+		if ((resultado % 12) != 0)
+			extenso = extenso + " e " + (resultado % 12) + " meses";
 
-    if ((calculate().intValue() % 12) != 0)
-      resultado = resultado + " e " + (calculate().intValue() % 12) + " meses";
+		return extenso;
+	}
 
-
-    return resultado;
-  }
-
-  public Rule72(String i) {
-    this.tax = new BigDecimal(pn.RemoveMarks(i));
-  }
+	public Rule72(String i) {
+		this.tax = new BigDecimal(pn.RemoveMarks(i));
+	}
 }
