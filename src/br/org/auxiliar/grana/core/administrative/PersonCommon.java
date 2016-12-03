@@ -34,7 +34,6 @@ public class PersonCommon {
 	}
 
 	public PersonCommon(String nome, String endereco, String numeroEndereco, String CEP, String telefone) {
-			// TODO Auto-generated constructor stub
 			this.nome = nome;
 			this.endereco = endereco;
 			this.numeroEndereco = numeroEndereco;
