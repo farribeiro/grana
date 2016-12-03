@@ -10,12 +10,16 @@ import br.org.auxiliar.grana.core.financial.FinancialTools;
  */
 public class Orcamentos {
 
-	private Orcamento o = new Orcamento();
+	private Orcamento orcamento;
 	private FinancialTools ft;
 
 	public boolean isMetaSuperada(String valor) {
 		// return o.getMeta().intValue() >
 		return true;
+	}
+
+	public Orcamentos(String value) {
+		orcamento = new Orcamento(new BigDecimal(value));
 	}
 
 	public String getValorInvestimento() {
