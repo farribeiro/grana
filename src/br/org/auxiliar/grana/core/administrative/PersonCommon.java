@@ -5,48 +5,41 @@ import br.org.auxiliar.grana.core.patterns.brazil.CEP;
 public class PersonCommon {
 
 	private String nome;
-	private int NumeroEndereco;
-	private CEP CEP;
-	private int Telefone;
+	private String numeroEndereco;
+	private String endereco;
+//	private CEP cep;
+	private String telefone;
 
 	public String getNome() {
 		return nome;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public String getNumeroEndereco() {
+		return numeroEndereco;
 	}
 
-	public int getNumeroEndereco() {
-		return NumeroEndereco;
-	}
-
-	public void setNumeroEndereco(int numeroEndereco) {
-		NumeroEndereco = numeroEndereco;
+	public String getEndereco() {
+		return endereco;
 	}
 
 	public CEP getCEP() {
 		return CEP;
 	}
 
-	public void setCEP(CEP cep) {
-		CEP = cep;
+	public String getTelefone() {
+		return telefone;
 	}
 
-	public int getTelefone() {
-		return Telefone;
+	public PersonCommon() {
+		// TODO Auto-generated constructor stub
 	}
 
-	public void setTelefone(int telefone) {
-		Telefone = telefone;
-	}
-
-	public void getRecord() {
-
-	}
-
-	public void setRecord() {
-
-	}
-
+	public PersonCommon(String nome, String endereco, String numeroEndereco, String CEP, String telefone) {
+			// TODO Auto-generated constructor stub
+			this.nome = nome;
+			this.endereco = endereco;
+			this.numeroEndereco = numeroEndereco;
+	//		cep = new CEP(cep);
+			this.telefone = telefone;
+		}
 }
