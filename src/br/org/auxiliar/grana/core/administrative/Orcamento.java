@@ -9,17 +9,18 @@ import java.math.BigDecimal;
 public class Orcamento {
 
 	private final BigDecimal Meta = new BigDecimal(30);
-	private BigDecimal valor;
+	private BigDecimal value;
 
 	public BigDecimal getValor() {
-		return valor;
-	}
-
-	public void setValor(BigDecimal valor) {
-		this.valor = valor;
+		return value;
 	}
 
 	public BigDecimal getMeta() {
 		return Meta;
 	}
+
+  public Orcamento(BigDecimal value) {
+    this.value = value;
+  }
+
 }
