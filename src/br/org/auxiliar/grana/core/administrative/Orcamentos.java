@@ -27,8 +27,8 @@ public class Orcamentos {
 	}
 
 	public String getValorComprometido(String value) {
-		o.setValor(new BigDecimal(value));
-		ft = new FinancialTools(o.getValor().toString(), o.getMeta().toString());
+		ft = new FinancialTools(orcamento.getValor().toString(), orcamento
+				.getMeta().toString());
 		return ft.getCash();
 	}
 
