@@ -22,9 +22,9 @@ public class PersonCommon {
 		return endereco;
 	}
 
-	public CEP getCEP() {
-		return CEP;
-	}
+//	public CEP getCep() {
+//		return cep;
+//	}
 
 	public String getTelefone() {
 		return telefone;
