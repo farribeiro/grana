@@ -14,7 +14,6 @@ browser, que abrirei issue para escolher a toolkit gráfica, atualmente são ela
 - gtkmm
 - XUL
 - Qt
-- XUL
 
 ## Sobre o conceito
 
